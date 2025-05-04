@@ -1,0 +1,68 @@
+.order-review-container {
+    display: flex;
+    width: 95vw;
+    margin-left: 5vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mini-order-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 100vh;
+}
+.active-order-container {
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.267);
+    display: flex;
+    flex-direction: column;
+    min-height: 40vh;
+    height: fit-content;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border-radius: 0.8rem;
+    border: 2px solid rgb(0, 247, 255);
+
+
+
+
+    justify-content: center;
+    align-items: center;
+
+}
+.motion-full {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.order-button-container {
+    width: 10%;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.active-order-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+    width: fit-content;
+    transition: 0.4s;
+}
+.active-order-button:hover {
+    color: aqua;
+    transition: 0.8s;
+}
+.header-button-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4vh;
+}

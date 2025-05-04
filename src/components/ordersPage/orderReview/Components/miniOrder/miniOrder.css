@@ -1,0 +1,29 @@
+.mini-container {
+    padding: 2rem;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.418);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    border-left: 2px solid rgb(0, 247, 255);
+    transition: 0.8s;
+    overflow: hidden
+
+}
+.mini-container:hover {
+    border: 2px solid rgb(0, 247, 255);
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+
+.active-mini-container {
+    z-index: 1;
+    border: 2px solid rgb(0, 247, 255);
+    box-shadow: 0 0 10px 3px rgba(0, 247, 255, 0.158);
+    background-color: rgba(0, 238, 255, 0.103);
+}

@@ -1,0 +1,110 @@
+/* General container for the entire component */
+.data-container {
+  display: flex;
+  justify-content: space-around; /* Position treemap on the left and stats on the right */
+  padding: 2%;
+  height: 100%;
+  width: 100%;
+  gap: 20px; /* Add gap between tree and stats */
+  align-items: center; /* Align the items to the top */
+  flex-direction: row;
+}
+
+/* The treemap container */
+.tree {
+  flex: 1; /* Allow it to grow and take available space */
+  max-width: 65%; /* Limit the max width */
+  border: 2px solid transparent;
+  border-radius: 0.8rem;
+  height: 100%;
+  box-sizing: border-box; /* Ensure padding and border don't affect layout */
+}
+
+/* Container for the bubbles (category stats) */
+.bubble-container-stats {
+  display: flex;
+  flex-direction: row;        /* Horizontal layout */
+  flex-wrap: wrap;            /* Wrap to next line if too many */
+  gap: 1rem;                  /* Space between bubbles */
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 30%;                /* Take full width */
+}
+.date-filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem; /* Space between date filter and bubbles */
+}
+/* Each individual bubble for stats */
+.bubble-baby {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  flex: 1 1 30%;              /* Flexible size */
+  justify-content: left;
+  height: auto;
+}
+
+/* Heading in each bubble */
+.bubble-baby h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #fdfdfd;
+  text-align: center;
+}
+
+/* Paragraphs inside each bubble */
+.bubble-baby p {
+  font-size: 14px;
+  color: #95cfcf;
+}
+
+/* First paragraph with bold font */
+.bubble-baby p:first-child {
+  font-weight: bold;
+}
+
+/* Style for loading message */
+.data-container p {
+  text-align: center;
+  font-size: 12px;
+}
+
+
+.tooltip-container {
+    background-color: #0000008a;
+    color: white;
+    padding: 2%;
+    border-radius: 0.8rem;
+}
+.tooltip-container p {
+    color: white;
+    font-size: medium;
+}
+.date-filter-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.bar-data {
+  height: fit-content;
+  width: fit-content;
+}
+.date-filter-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.date-box {
+  background-color: rgba(0, 0, 0, 0.185);
+  color: rgb(177, 177, 177);
+  border: 1px solid rgb(133, 133, 133);
+  border-radius: 0.2rem;
+}

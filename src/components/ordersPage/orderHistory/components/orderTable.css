@@ -1,0 +1,120 @@
+/* Main table background */
+.order-table .rdt_Table {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    color: white !important;
+    width: 85vw;
+    height: 65vh;
+    overflow: auto;
+    
+    border-radius: 10px;
+
+  }
+  .order-table .rdt_Table::-webkit-scrollbar {
+    scrollbar-width: thin;
+
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+  }
+  
+  /* Header row background */
+  .order-table .rdt_TableHeadRow  {
+    background-color: rgba(40, 40, 40, 0.808) !important;
+    color: white;
+  }
+  
+  /* Individual rows */
+  .order-table .rdt_TableRow {
+    background-color: transparent !important;
+    color: white !important;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover row */
+  .order-table .rdt_TableRow:hover {
+    background-color: rgba(125, 177, 197, 0.3) !important;
+    color: red;
+  }
+  
+  /* Striped rows (if you want extra contrast) */
+  .order-table .rdt_TableBody .rdt_TableRow:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+  }
+  
+  .order-table .rdt_TableBody .rdt_TableRow:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+  
+  /* Table cells */
+  .order-table .rdt_TableCell {
+    color: white !important;
+  }
+  
+  /* Pagination background */
+  .order-table .rdt_Pagination {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  
+  /* Make dropdown and buttons visible */
+  .order-table select,
+  .order-table button {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    margin-right: 0.5rem;
+  }
+  .order-table input[type="text"] {
+    background-color: rgba(29, 21, 21, 0.1);
+    color: white;
+    border: 1px solid rgba(189, 189, 189, 0.3);
+    backdrop-filter: blur(3px);
+  }
+  /* Style the custom "no data" message */
+.no-data {
+    color: white;
+    padding: 20px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4)
+    
+  }
+  /* Main data table container override */
+.order-table .rdt_Table {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* your transparent black look */
+    color: white;
+  }
+  
+  /* Header override */
+  .order-table .rdt_TableHead {
+    background-color: rgba(53, 53, 53, 0.527) !important;
+  }
+  
+  /* No data container override */
+  .order-table .rdt_TableBody {
+    background-color: transparent !important;
+  }
+  
+  /* No data message override */
+  .order-table .no-data {
+    background-color: transparent !important;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .filter-bar {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 2rem;
+  }
+  .order-table input {
+    background-color: rgba(100, 100, 100, 0.1) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 5px !important;
+    padding: 5px !important;
+    margin-right: 10px !important;
+    width: 200px !important; /* Adjust the width as needed */
+    height: 2.5rem !important;
+  }
+  

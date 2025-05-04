@@ -1,0 +1,18 @@
+.pdf-button {
+    background-color: rgba(44, 44, 44, 0.418);
+    padding: 10px;
+    display: flex;
+    width: 100px;
+    height: 40px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.pdf-button:hover {
+    background-color: rgba(127, 240, 255, 0.5);
+    transition: 0.5s;
+    cursor: pointer;
+}

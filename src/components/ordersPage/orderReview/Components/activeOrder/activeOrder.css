@@ -1,0 +1,43 @@
+.active-order {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    height:90%
+}
+.border-title{
+    border-bottom: 1px solid rgb(0, 247, 255);
+    margin-bottom: 10px;
+}
+.device-info-container {
+    width: 40%;
+    height: 100%;
+}
+.info-container-order {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.active-order-main {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.note-section {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.input-box {
+    background-color: rgba(5, 5, 5, 0.226);
+    color: white;
+    padding: 0.2rem;
+    border: 1px solid rgb(116, 116, 116);
+    border-radius: 0.5rem;
+
+}
