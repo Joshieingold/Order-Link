@@ -19,7 +19,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 // ChartWrapper component for conditional rendering
 const ChartWrapper = ({ data, loading, children }) => {
   if (loading) return <p>Loading chart...</p>;
-  if (!data || data.length === 0) return <p>No data available</p>;
+  if (!data || data.length === 0) return <p className='empty-bubble'>No data available</p>;
   return children;
 };
 
