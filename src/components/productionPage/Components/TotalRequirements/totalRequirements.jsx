@@ -25,13 +25,13 @@ export const TotalRequirements = ({ prodData, goalData }) => {
     }
 
     return (
-        <PieChart width={300} height={300}>
+        <PieChart width={200} height={200}>
             <Pie
                 data={chartData}
                 cx="50%"
                 cy="50%"
                 labelLine={false}
-                outerRadius={100}
+                outerRadius={80}
                 fill="#8884d8"
                 dataKey="value"
                 label={({ name, value }) => `${name}: ${value}`}

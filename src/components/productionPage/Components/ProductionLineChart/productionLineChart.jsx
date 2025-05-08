@@ -18,7 +18,7 @@ export const ProductionLineChart = ({ prodData }) => {
     })).sort((a, b) => parseInt(a.day.split(" ")[1]) - parseInt(b.day.split(" ")[1]));
 
     return (
-        <ResponsiveContainer width={1000} height={300}>
+        <ResponsiveContainer width={"100%"} height={"90%"}>
             <LineChart data={chartData}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="day" />

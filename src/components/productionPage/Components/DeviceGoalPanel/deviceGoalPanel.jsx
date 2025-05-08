@@ -38,8 +38,8 @@ export const DeviceGoalPanel = ({ prodData, goalData }) => {
                 <h4>{device}</h4>
                 <PieChart
                     width={120}
-                    height={120}
-                    style={{ maxHeight: '40vh', maxWidth: '20vw' }}
+                    height={200}
+                    style={{ Height: '20rem', Width: '20rem' }}
                 >
                     <Pie
                         data={chartData}
@@ -54,7 +54,7 @@ export const DeviceGoalPanel = ({ prodData, goalData }) => {
                         ))}
                     </Pie>
                     <Tooltip />
-                    <Legend />
+
                 </PieChart>
             </div>
         );
@@ -64,11 +64,10 @@ export const DeviceGoalPanel = ({ prodData, goalData }) => {
         <div style={{
             display: 'flex',
             flexWrap: 'wrap',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            maxHeight: '100vh',
-            overflowY: 'auto',
-            gap: '1rem',
+            justifyContent: 'space-around',
+            alignItems: 'space-around',
+            height: '100%',
+            textAlign: 'center',
         }}>
             {chartBlocks}
         </div>

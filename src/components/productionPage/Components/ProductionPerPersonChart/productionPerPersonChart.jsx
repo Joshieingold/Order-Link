@@ -17,14 +17,14 @@ export const ProductionByPersonChart = ({ prodData }) => {
     }));
 
     return (
-        <ResponsiveContainer width={500} height={350}>
+        <ResponsiveContainer width={"100%"} height={"90%"}>
             <BarChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="quantity" fill="#82ca9d" name="Total Produced" />
+                <Bar dataKey="quantity" fill="blue" name="Total Produced" />
             </BarChart>
         </ResponsiveContainer>
     );
