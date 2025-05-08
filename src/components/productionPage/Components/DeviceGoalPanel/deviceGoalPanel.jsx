@@ -47,7 +47,6 @@ export const DeviceGoalPanel = ({ prodData, goalData }) => {
                         cy="50%"
                         outerRadius={40}
                         dataKey="value"
-                        label={({ name, value }) => `${name}: ${value}`}
                     >
                         {chartData.map((entry, idx) => (
                             <Cell key={`cell-${idx}`} fill={entry.color} />

@@ -24,7 +24,7 @@ export const ProductionByPersonChart = ({ prodData }) => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="quantity" fill="blue" name="Total Produced" />
+                <Bar dataKey="quantity" fill="rgba(34, 213, 226, 0.64)" name="Total Produced" />
             </BarChart>
         </ResponsiveContainer>
     );

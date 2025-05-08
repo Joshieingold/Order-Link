@@ -10,7 +10,7 @@ export const ProductionPage = () => {
     const [prodData, setProdData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [goalData, setGoalData] = useState(null);
-    const [selectedMonth, setSelectedMonth] = useState("February");
+    const [selectedMonth, setSelectedMonth] = useState("April");
 
     useEffect(() => {
         const fetchData = async () => {
