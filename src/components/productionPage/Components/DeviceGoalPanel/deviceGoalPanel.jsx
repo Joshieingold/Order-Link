@@ -34,11 +34,11 @@ export const DeviceGoalPanel = ({ prodData, goalData }) => {
               ];
 
         return (
-            <div className="device-goal-container" key={device}>
+            <div className="square-bubble devices" key={device}>
                 <h4>{device}</h4>
                 <PieChart
                     width={120}
-                    height={200}
+                    height={120}
                     style={{ Height: '20rem', Width: '20rem' }}
                 >
                     <Pie
@@ -61,14 +61,7 @@ export const DeviceGoalPanel = ({ prodData, goalData }) => {
     }).filter(Boolean);
 
     return (
-        <div style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-around',
-            alignItems: 'space-around',
-            height: '100%',
-            textAlign: 'center',
-        }}>
+        <div className='internal-device-goal-container'>
             {chartBlocks}
         </div>
     );

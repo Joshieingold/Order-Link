@@ -5,24 +5,29 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
     align-items: center;
 }
 .charts-container {
+    box-sizing: border-box;
     height: 90vh;
     width:95%;
     display: flex;
 }
 .main-stats-container {
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    box-sizing: border-box;
+    justify-content: space-around;
 }.two-stats-container {
     height: 45%;
     width: 100%;
     display: flex;
+    box-sizing: border-box;
     justify-content: space-around;
 }
 .one-stats-container {
@@ -30,11 +35,13 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
 }
 .device-stat-box {
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
     align-items: center;
 }

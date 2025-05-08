@@ -1,0 +1,13 @@
+.square-bubble.devices {
+    display: flex;
+    background-color: red;
+    flex-direction: column;
+    aspect-ratio: 1/1;
+}
+.internal-device-goal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
