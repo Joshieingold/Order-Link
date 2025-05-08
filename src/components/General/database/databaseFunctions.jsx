@@ -2,7 +2,7 @@ import { endOfWeek, format, startOfWeek, eachDayOfInterval, isWithinInterval } f
 import { collection, getDocs, query, where, orderBy, limit } from "firebase/firestore";
 import { db } from "./firebase"; // Firestore instance
 import { Timestamp, addDoc } from "firebase/firestore";
-import { deleteDoc, doc, setDoc } from "firebase/firestore";
+import { deleteDoc, doc, setDoc, getDoc } from "firebase/firestore";
 export const fetchOrdersData = async () => { 
     try {
         const deliveryRef = collection(db, "DeliveryTracker");
@@ -373,5 +373,64 @@ export const ChangeTempOrder = async (order) => {
         console.log("ChangeTempOrder called with:", order);
         console.log("There was an unexpected error:", error);
         return;
+    }
+};
+export const FetchProdData = async (monthName) => {
+    try {
+        // Normalize month name and get index
+        const monthIndex = new Date(`${monthName} 1`).getMonth(); // e.g., "January" → 0
+        const currentYear = new Date().getFullYear();
+
+        const deliveryRef = collection(db, "bom-wip");
+        const querySnapshot = await getDocs(query(deliveryRef));
+
+        if (querySnapshot.empty) {
+            console.log("No matching documents.");
+            return [];
+        }
+
+        let prodData = [];
+        querySnapshot.forEach((doc) => {
+            const data = doc.data();
+            const timestamp = data.Date;
+            if (timestamp && timestamp.toDate) {
+                const date = timestamp.toDate();
+                if (date.getMonth() === monthIndex && date.getFullYear() === currentYear) {
+                    prodData.push({
+                        Date: date,
+                        Device: data.Device,
+                        Name: data.Name,
+                        Quantity: data.Quantity,
+                    });
+                }
+            }
+        });
+
+        return prodData;
+    } catch (error) {
+        console.error("Error fetching bom-wip data:", error);
+        return [];
+    }
+};
+export const FetchGoalData = async (monthName) => {
+    try {
+        // Convert month name to number (1-based string)
+        const monthIndex = new Date(`${monthName} 1`).getMonth(); // 0-based
+        const monthId = (monthIndex + 1).toString(); // "1" for January, etc.
+
+        const docRef = doc(db, "MonthlyGoals", monthId);
+        const docSnap = await getDoc(docRef);
+
+        if (!docSnap.exists()) {
+            console.log("No goals document found for this month.");
+            return {};
+        }
+
+        const data = docSnap.data(); // This is an object: { DeviceA: 20, DeviceB: 15, ... }
+        return data;
+
+    } catch (error) {
+        console.error("Error fetching MonthlyGoals data:", error);
+        return {};
     }
 };

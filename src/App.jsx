@@ -7,6 +7,7 @@ import { HomePage } from './components/homePage/homePage';
 import OrderStatisticsPage from './components/ordersPage/orderStatistics/orderStatistics';
 import { OrderReview } from './components/ordersPage/orderReview/orderReview';
 import { OrderHistory } from './components/ordersPage/orderHistory/orderHistory';
+import { ProductionPage } from './components/productionPage/production';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function AnimatedRoutes() {
         <Route path="OrderReview" element={<RequireAuth><OrderReview /></RequireAuth>} />
         <Route path="OrderHistory" element={<RequireAuth><OrderHistory /></RequireAuth>} />
         <Route path="*" element={<LoginPage />}/>
+        <Route path="/prod" element={<ProductionPage />} />
       </Routes>
     </AnimatePresence>
   );
