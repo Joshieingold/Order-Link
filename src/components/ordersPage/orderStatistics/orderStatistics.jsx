@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './orderStatistics.css';
-import "../../General/General.css";
+import "../../General/general.css";
 import { fetchOrdersData } from '../../General/database/databaseFunctions.jsx';
-import OptChart from './Components/OrdersPerTechChart/optChart.jsx';
-import DptChart from "./Components/DevicesPerTechChart/dptChart.jsx";
-import WaybillTreemap from './Components/OrdersTreeMap/OrdersTreeMap.jsx';
+import OptChart from './components/OrdersPerTechChart/optChart.jsx';
+import DptChart from "./components/DevicesPerTechChart/dptChart.jsx";
+import WaybillTreemap from './components/OrdersTreeMap/OrdersTreeMap.jsx';
 import { Navbar } from '../../General/navbar/navbar.jsx';
 import OrdersNavbar from './components/ordersNavbar/ordersNavbar.jsx';
 import TotalDevicesPieChart from './components/TotalDevicesPieChart/totalDevicesPieChart.jsx';
