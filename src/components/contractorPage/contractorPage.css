@@ -1,0 +1,9 @@
+.ctr-page-main {
+    display: flex;
+    width: 95vw;
+    height: 100vh;
+    margin-left: 10vw;
+    justify-content: center;
+    align-items: center;
+
+}
