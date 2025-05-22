@@ -10,6 +10,8 @@ import { OrderHistory } from './components/ordersPage/orderHistory/orderHistory'
 import { ProductionPage } from './components/productionPage/production';
 
 function AnimatedRoutes() {
+import {CtrPage} from './components/contractorPage/contractorPage'
+function AnimatedRoutes() { 
   const location = useLocation();
 
   return (
@@ -20,6 +22,7 @@ function AnimatedRoutes() {
         <Route path="/Orders" element={<RequireAuth><OrderStatisticsPage /></RequireAuth>} />
         <Route path="OrderReview" element={<RequireAuth><OrderReview /></RequireAuth>} />
         <Route path="OrderHistory" element={<RequireAuth><OrderHistory /></RequireAuth>} />
+        <Route path="Contractors" element={<RequireAuth><CtrPage/></RequireAuth>}/>
         <Route path="*" element={<LoginPage />}/>
         <Route path="/prod" element={<ProductionPage />} />
       </Routes>
