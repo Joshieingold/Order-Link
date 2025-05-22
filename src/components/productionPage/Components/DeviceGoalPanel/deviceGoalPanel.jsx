@@ -1,5 +1,5 @@
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
-import "./DeviceGoalPanel.css";
+import "./deviceGoalPanel.css";
 
 const COLORS = {
     produced: '#4A90E2',

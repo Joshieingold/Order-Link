@@ -8,9 +8,8 @@ import OrderStatisticsPage from './components/ordersPage/orderStatistics/orderSt
 import { OrderReview } from './components/ordersPage/orderReview/orderReview';
 import { OrderHistory } from './components/ordersPage/orderHistory/orderHistory';
 import { ProductionPage } from './components/productionPage/production';
+import {CtrPage} from './components/contractorPage/contractorPage';
 
-function AnimatedRoutes() {
-import {CtrPage} from './components/contractorPage/contractorPage'
 function AnimatedRoutes() { 
   const location = useLocation();
 
