@@ -39,19 +39,13 @@ export const CtrTable = () => {
     const thisWeek = generateWeek("2025-03-17");
 
     return (
-        <div className="week-container">
-            {thisWeek.map((date, index) => (
-                <div className="day-box" key={date}>
-                    <div className="day-label">{weekdays[index]}</div>
-                    <div className="day-content">
-                        {weekMap[date] ? (
-                            <pre>{JSON.stringify(weekMap[date], null, 2)}</pre>
-                        ) : (
-                            <span>No Data</span>
-                        )}
-                    </div>
-                </div>
-            ))}
-        </div>
+        <DataTable className="order-table"
+        columns={[
+            { name: "", selector: (row) => row.OrderID, sortable: true },]}
+        
+        
+        >
+
+        </DataTable>
     );
 };
