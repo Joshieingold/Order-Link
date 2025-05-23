@@ -1,7 +1,10 @@
-.ctr-navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    background: red;
+
+.ctr-link {
+    cursor: pointer;
+    transition: 0.4s;
+
+}
+.ctr-link:hover {
+    color: rgb(74, 234, 255);
+    transition: 0.4s;
 }

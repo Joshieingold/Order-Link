@@ -434,3 +434,42 @@ export const FetchGoalData = async (monthName) => {
         return {};
     }
 };
+const generateWeek = (mondayStr) => {
+    const monday = new Date(mondayStr);
+    let week = [];
+    for (let i = 0; i < 5; i++) {
+        const d = new Date(monday);
+        d.setDate(monday.getDate() + i);
+        week.push(d.toISOString().split('T')[0]); // Format: YYYY-MM-DD
+    }
+    return week;
+};
+
+export const FetchCtrDataForWeek = async (thisMonday, thisCTR) => {
+    const thisWeek = generateWeek(thisMonday);
+    const startDate = new Date(thisWeek[0]);
+    const endDate = new Date(thisWeek[4]);
+    endDate.setHours(23, 59, 59, 999);
+
+    try {
+        const collectionRef = collection(db, "CTR-Reports");
+        const q = query(
+            collectionRef,
+            where("ctrID", "==", thisCTR),
+            where("dateSubmitted", ">=", Timestamp.fromDate(startDate)),
+            where("dateSubmitted", "<=", Timestamp.fromDate(endDate))
+        );
+        const querySnapshot = await getDocs(q);
+        let reportData = [];
+
+        querySnapshot.forEach((docSnap) => {
+            const data = docSnap.data();
+            reportData.push(data);
+        });
+
+        return reportData;
+    } catch (error) {
+        console.error("Error pulling CTR data:", error);
+        return [];
+    }
+};
