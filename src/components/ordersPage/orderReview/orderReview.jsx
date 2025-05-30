@@ -25,7 +25,7 @@ export const OrderReview = () => {
                 console.log(parsedResults[i].orderID, " pushed to temporary database");
             }
             else {
-                PushPdfDataToPrimaryDatabase(parsedResults[i]);
+                // PushPdfDataToPrimaryDatabase(parsedResults[i]);
                 console.log(parsedResults[i].orderID, " pushed to primary database");
             }
         }

@@ -38,7 +38,7 @@ export const PdfParse = ({ onParsed }) => {
     };
 
     const GetNameAndLocation = (text) => {
-        const relevantText = GetRevelevantData(text, "Saint John,NB,E2R 1A6,Canada", "Load Number:");
+        const relevantText = GetRevelevantData(text, "Saint John,NB,E2R 1A6,CANADA", "Load Number:");
         const techNameMatch = relevantText.match(/([A-Za-z]+ [A-Za-z]+)/);
         const techName = techNameMatch?.[0] ?? "Unknown";
         const locationText = relevantText.replace(techName, "").trim().replace(/^,?\s*/, "");
@@ -92,7 +92,7 @@ export const PdfParse = ({ onParsed }) => {
 
     const GetDevicesAndOrderID = (data) => {
         try {
-            const relevantData = data.split("Item Description")[1]?.trim() || "";
+            const relevantData = data.split("LPN Number")[1]?.trim() || "";
             const relevantLines = relevantData.split(" ").filter(line => line.trim());
             const orderID = relevantLines[0]?.split(" ")[0] || "Unknown";
             const itemsArray = relevantData.split(orderID);
@@ -101,7 +101,7 @@ export const PdfParse = ({ onParsed }) => {
                 const words = line.split(" ").filter(Boolean);
                 let name = "", quantity = 0;
                 for (let i = 0; i < words.length; i++) {
-                    if (words[i + 1] === "UNITS") {
+                    if (words[i + 1] === "EA") {
                         quantity = parseInt(words[i]);
                         break;
                     } else {
